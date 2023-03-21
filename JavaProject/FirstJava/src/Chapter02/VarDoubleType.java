@@ -20,6 +20,7 @@ public class VarDoubleType {
 		System.out.println(height2);
 		
 		System.out.println(height + height2);
+		
 	}
 
 }

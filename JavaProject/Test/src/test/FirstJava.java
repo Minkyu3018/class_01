@@ -6,6 +6,7 @@ public class FirstJava {
 		// TODO Auto-generated method stub
 
 		System.out.println("First JAVA");
+		System.out.println();
 	}
 
 }

@@ -14,10 +14,10 @@ public class Scanner01 {
 //			System.out.println(name + "님\n반갑습니다");
 
 		Scanner chicken = new Scanner(System.in);
-//		System.out.println("치킨은 살 안쪄요.");
+		System.out.println("아무거나 입력하세요.");
 		
 		String name = chicken.nextLine();
-			System.out.println("치킨은 살 안쪄요.");
+			System.out.println(name+ "~치킨은 살 안쪄요.");
 	}
 
 }

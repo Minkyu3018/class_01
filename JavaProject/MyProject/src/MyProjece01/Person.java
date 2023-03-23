@@ -1,3 +1,4 @@
+package MyProjece01;
 
 public class Person {
 

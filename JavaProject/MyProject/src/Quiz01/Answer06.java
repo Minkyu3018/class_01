@@ -9,16 +9,21 @@ public class Answer06 {
 		int num = 1; // 증가값
 		int sum = 0;
 
-		while (num < 100) {
-//			System.out.println(sum);
+		while (num < 100) {    // 반복처리하는 문장 : 합을 구하는 연산
 
-			sum = sum + num;
+//			sum = sum + num;
+			sum += num;
 
 			num++;
 		}
+		sum = 0;
+		int i;
+		
+		for(i=0; i<100; i++) {
+			sum += i;
+		}
+		
 
 		System.out.println("합 : " + sum);
-
-	}
-
+	}	
 }

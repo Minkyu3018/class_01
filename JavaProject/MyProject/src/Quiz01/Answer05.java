@@ -31,12 +31,36 @@ public class Answer05 {
 			break;
 
 		default:
-
 			System.out.println("300이상");
 			break;
 
 		}
+		System.out.println();
+
+		//if문 내에 switch case 를 넣어 사용 방법
+		int num1 = 0;
+
+		if (num1 < 0) {
+			System.out.println("0미만");
+		} else {
+			switch (num1 / 100) {
+			case 0:
+				System.out.println("0이상 100 미만");
+				break;
+
+			case 1:
+				System.out.println("100이상 200 미만");
+				break;
+
+			case 2:
+				System.out.println("200이상 300 미만");
+				break;
+
+			default:
+				System.out.println("300이상");
+				break;
+			}
+		}
 
 	}
-
 }

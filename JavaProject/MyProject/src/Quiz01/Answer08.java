@@ -9,15 +9,15 @@ public class Answer08 {
 		int i = 1;
 		int sum = 0;
 
-		while (i <= 1000) {
+		while (i <= 1000) {                    // 1000이하의 숫자를 반복
 
-			if (i % 2 == 0 && i % 7 == 0) {
-				System.out.println(i);
-				sum = sum + i;
+			if (i % 2 == 0 && i % 7 == 0) {    // 2의배수와 7의배수를 뽑아냄
+				System.out.println(i);         // 뽑아낸 숫자를 출력함
+				sum = sum + i;                 // 출력된 숫자를 더함
 			}
-			i++;		
+			i++;							   // i가 1씩 증가(1000이 될때까지)
 		}
-		System.out.println("합 : " + sum);
+		System.out.println("합 : " + sum);      // 반복해서 더해진 값을 출력함
 	
 	}
 

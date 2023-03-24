@@ -8,22 +8,20 @@ public class Answer07 {
 //	   while문과 do~while 문을 각각 한번씩 사용해서 작성
 
 		int num = 1;
-		
+
 		while (num < 101) {
 			System.out.println(num);
 			num++;
-								
+
 		}
-		
+
 		System.out.println();
-		
+
 		do {
 			num--;
 			System.out.println(num);
-			
-		} while (num > 1);
-			
-			
-		}
-	}
 
+		} while (num > 1);
+
+	}
+}

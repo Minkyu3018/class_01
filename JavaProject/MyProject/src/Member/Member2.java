@@ -1,6 +1,6 @@
 package Member;
 
-public class Member {
+public class Member2 {
 
 	// ① 아래의 데이터를 저장 이름, 전화번호, 전공, 학년, email, 생일, 주소
 	// ② 위에서 정의한 정보를 출력하는 메소드 정의
@@ -15,7 +15,7 @@ public class Member {
 	private String birthday;
 	private String address;
 
-	public Member(String name, String phoneNumber, String major, int grade, String email, String birthday,
+	public Member2(String name, String phoneNumber, String major, int grade, String email, String birthday,
 			String address) {
 		super(); // << 상위 클래스에 있는 생성자 호출(상속). 현재는 의미 없음.
 		this.name = name;
@@ -27,7 +27,7 @@ public class Member {
 		this.address = address;
 	}
 
-	public Member(String name, String phoneNumber, String major, int grade, String email) {
+	public Member2(String name, String phoneNumber, String major, int grade, String email) {
 		super(); // << 상위 클래스에 있는 생성자 호출(상속). 현재는 의미 없음.
 		this.name = name;
 		this.phoneNumber = phoneNumber;
@@ -64,12 +64,12 @@ public class Member {
 	
 	public static void main(String[] args) {
 		
-		Member member1 = new Member("손흥민", "010-1234-5678", "축구", 1, "son@gamil.com" , "90년10월12일", "서울시");
+		Member2 member1 = new Member2("손흥민", "010-1234-5678", "축구", 1, "son@gamil.com" , "90년10월12일", "서울시");
 		member1.printData();
 		
 		System.out.println();
 		
-		Member member2 = new Member("박지성", "010-2222-5678", "체육", 4, "park@gamil.com");
+		Member2 member2 = new Member2("박지성", "010-2222-5678", "체육", 4, "park@gamil.com");
 		member2.printData();
 	}
 }

@@ -1,4 +1,4 @@
-package Cal;
+package MyProject02;
 
 import java.util.Scanner;
 

@@ -33,7 +33,7 @@ public class ContactMain3 {
 		Contact contact = new Contact(name, phoneNumber, email, address, birthday, group);
 	
 		// 인스턴스의 출력 메소드
-		contact.printSimleData();
+		contact.printSimpleData();
 	
 	}
 	

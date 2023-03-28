@@ -75,7 +75,7 @@ public class Contact {
 	
 	
 	// 이름과 전화번호만 출력하는 메소드
-	public void printSimleData() {
+	public void printSimpleData() {
 		System.out.println("이름 : " + name);
 		System.out.println("전화번호 : " + phoneNumber);
 	}

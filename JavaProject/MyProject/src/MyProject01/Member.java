@@ -1,4 +1,4 @@
-package MyProjece01;
+package MyProject01;
 
 public class Member {
 
@@ -19,5 +19,7 @@ public class Member {
 		System.out.println("키 : " + height + "cm");
 		System.out.println("책 보유 여부 : " + hasBook); // 5. 출력
 	}
+	
+	
 
 }

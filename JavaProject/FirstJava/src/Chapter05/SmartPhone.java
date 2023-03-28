@@ -9,8 +9,8 @@ public class SmartPhone {
 	
 	// 메소드 정의
 	// 전화걸기 기능
-	void call() {
-		System.out.println("전화를 겁니다!");
+	void call(String number) {
+		System.out.println(number + "에 전화를 겁니다!");
 	}
 	
 	// 볼륨을 키우는 기능
@@ -49,7 +49,7 @@ public class SmartPhone {
 		
 		System.out.println();
 		// 인스턴스 메소드 호출 => 참조변수.메소드이름()
-		sp.call();
+		sp.call("119");
 		
 		// 볼륨의 값을 변경하는 방법
 		// 1. 변수에 직접대입 ( X 사용되지 않음)

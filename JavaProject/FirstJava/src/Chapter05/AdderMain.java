@@ -8,6 +8,7 @@ public class AdderMain {
 
 		adder.add(10);
 		System.out.println(adder.add(10,20));
+		System.out.println(adder.add(10.0f,20.0f));
 		
 	}
 

@@ -63,7 +63,7 @@ public class Student {
 	}
 	
 	public String result() {
-		return korScore+"\t"+engScore+"\t"+mathScore+"\t"+sum()+"\t"+avg();
+		return sName+"\t"+korScore+"\t"+engScore+"\t"+mathScore+"\t"+sum()+"\t"+avg();
 	}
 
 	@Override

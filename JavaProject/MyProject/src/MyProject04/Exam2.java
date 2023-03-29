@@ -17,7 +17,7 @@ public class Exam2 {
 		students[8] = new Student("son09",55,60,80);
 		students[9] = new Student("son10",63,50,100);
 		
-		System.out.println("국어\t영어\t수학\t총점\t평균");
+		System.out.println("이름\t국어\t영어\t수학\t총점\t평균");
 		System.out.println("=======================================");
 		for(Student student : students) {
 			System.out.println(student.result());

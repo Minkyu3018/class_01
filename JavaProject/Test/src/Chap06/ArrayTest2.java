@@ -1,13 +1,14 @@
 package Chap06;
 
-public class ArrayTest2 extends ArrayTest1{
+public class ArrayTest2 {
 
-		public static void main(String[] args) {
-			
-			ArrayTest1 array = new ArrayTest1();
-			
-			array.plus();
-			
+	public static void main(String[] args) {
+		
+		int[] arr = new int[10];
+		System.out.println(arr.length);
+		
+		for(int i=0; i<arr.length; i++) {
+			System.out.println(arr[i]);
 		}
-	
+	}
 }

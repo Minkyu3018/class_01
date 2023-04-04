@@ -14,7 +14,7 @@ public class MemberMain {
 		
 		mb.print();
 		System.out.println("=======================");
-		mb2.print();
+		mb2.print2();
 	}
 		
 	

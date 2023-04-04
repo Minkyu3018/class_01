@@ -1,27 +1,24 @@
 package Chap06;
 
 public class ArrayTest1 {
-
-	int num1;
-	int num2;
 	
-	public ArrayTest1() {}
-
-	public ArrayTest1(int num1, int num2) {
-		super();
-		this.num1 = num1;
-		this.num2 = num2;
-	}
-
-	public void plus() {
-		System.out.println(num1 + num2);
-	}
-
 	public static void main(String[] args) {
-
-		ArrayTest1 array = new ArrayTest1();
-
-		array.plus();
 		
+		int[] score = new int[5];
+		score[3] = 100;
+		
+		System.out.println("score[0] : " + score[0]);
+		System.out.println("score[1] : " + score[1]);
+		System.out.println("score[2] : " + score[2]);
+		System.out.println("score[3] : " + score[3]);
+		System.out.println("score[4] : " + score[4]);
+		
+		
+		int value = score[3];
+		System.out.println(value);
+		
+		int tmp = score.length;
+		System.out.println(tmp);
 	}
+	
 }

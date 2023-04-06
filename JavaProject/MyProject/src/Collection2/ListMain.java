@@ -8,9 +8,8 @@ public class ListMain {
 
 	public static void main(String[] args) {
 
-		// 나의 팀을 구성하고 싶다 -> 선수들을 저장할 수 있는 공간을 생성하고
-		// 선수들을 저장
-
+		// 1.축구선수 인스턴스를 저장할 수 있는 List<E> 컬렉션 인스턴스를 생성해서 인스턴스를 저장하고
+//		출력하는 프로그램을 만들어 봅시다.
 		ArrayList<FootballPlayer> myTeam = new ArrayList<>();
 
 		myTeam.add(new FootballPlayer("손흥민", "7", "토트넘", 30));
@@ -19,11 +18,12 @@ public class ListMain {
 
 		System.out.println("나의 팀 선수정보");
 		for (FootballPlayer player : myTeam) {
-//			player.showInfo();
 			System.out.println(player.toString());
 
 		}
-		System.out.println("======set=======");
+		System.out.println("===========set============");
+		// 2.축구선수의 인스턴스가 팀과 이름 그리고 나이가 같으면 같은 선수라 판단하고 입력이 되지 않도록
+//		Set<E> 컬렉션을 이용해서 축구선수 인스턴스를 저장하고 출력하는 프로그램을 만들어 봅시다.
 
 		HashSet<FootballPlayer> playerSet = new HashSet<>();
 
@@ -33,10 +33,12 @@ public class ListMain {
 		playerSet.add(new FootballPlayer("손흥민", "7", "토트넘", 30));
 
 		for (FootballPlayer player : playerSet) {
-			player.showInfo();
+			System.out.println(player);
 		}
 		System.out.println("=========treeset==========");
 
+//		3.TreeSet<E>을 이용해서 팀 이름순으로 정렬하고, 같은 팀의 선수들은 이름 순으로 정렬하고, 
+//		같은 이름의 선수는 번호 순으로 저장하는 프로그램을 만들어 봅시다.
 		TreeSet<FootballPlayer> playerTset = new TreeSet<FootballPlayer>();
 
 		playerTset.add(new FootballPlayer("손흥민", "7", "토트넘", 30));
@@ -45,7 +47,14 @@ public class ListMain {
 		playerTset.add(new FootballPlayer("손흥민", "7", "토트넘", 30));
 
 		for (FootballPlayer player : playerTset) {
-			player.showInfo();
+			System.out.println(player);
 		}
+	
+//		4.축구선수의 번호를 key로 하고 축구선수 인스턴스를 저장하는 Map<K,V> 인스턴스를 이용해서 
+//		프로그램을 만들어봅시다.
+		
+	
+	
+	
 	}
 }

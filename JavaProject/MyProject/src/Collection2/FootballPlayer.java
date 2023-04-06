@@ -6,7 +6,7 @@ import java.util.TreeSet;
 import java.util.Comparator;
 import java.util.HashMap;
 
-// 축구선수의 정보를 저장하는 클래스 : 축구선수 데이터 저장 ->인스턴스생성 ->배열-> List이용
+// 축구선수의 정보를 저장하는 클래스 : 축구선수 데이터 저장 ->인스턴스생성 -> 배열-> List이용
 public class FootballPlayer implements Comparable<FootballPlayer> {
 
 	private String name;

@@ -1,4 +1,4 @@
--- 
+-- 함수문제 1
 
 -- 16. SUBSTR 함수를 사용하여 사원들의 입사한 년도와 입사한 달만 출력하시오.
 select hiredate , substr(hiredate, 1, 5)

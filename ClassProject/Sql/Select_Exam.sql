@@ -3,7 +3,8 @@
 -- 사원의 이름, 급여, 인상된 급여를 출력하시오.
 
 SELECT ename, sal, sal+300 as totalSal
-from emp;
+from emp
+order by 3;   -- 3번째 컬럼( sal+300 ) 을 오름차순으로 정렬
 
 -- 2. 사원의 이름, 급여, 연간 총 수입을 총 수입이 많은 것부터 작은 순으로 출력하시오, 
 -- 연간 총수입은 월급에 12를 곱한 후 $100의 상여금을 더해서 계산하시오.
@@ -22,6 +23,7 @@ SELECT empno, ename, deptno from emp where empno = 7788;
 -- 5. 급여가 2000에서 3000 사이에 포함되지 않는 사원의 이름과 급여를 출력하시오.
 
 SELECT ename, sal from emp where sal not between 2000 and 3000;
+SELECT ename, sal from emp where not sal between 2000 and 3000;
 
 -- 6. 1981년 2월 20일 부터 1981년 5월 1일 사이에 입사한 사원의 이름, 담당업무, 입사일을 출력하시오.
 
@@ -51,7 +53,12 @@ SELECT ename, job, mgr from emp where mgr is null;
 --  기준으로 내림차순 정렬하여 표시하시오.
 
 SELECT ename, sal, comm from emp where not(comm = 0 or comm is null)
-order by comm desc;
+order by sal desc , comm desc;
+
+SELECT ENAME, SAL, COMM
+FROM EMP
+WHERE COMM IS NOT NULL and comm != 0
+ORDER BY SAL DESC, COMM DESC;
 
 -- 12. 이름의 세번째 문자가 R인 사원의 이름을 표시하시오.
 
@@ -59,7 +66,9 @@ SELECT ename from emp where ename like '__R%';
 
 -- 13. 이름에 A와 E를 모두 포함하고 있는 사원의 이름을 표시하시오.
 
-SELECT ename from emp where ename like '%A%E%';
+-- SELECT ename from emp where ename like '%A%E%';
+SELECT ename from emp where ename like '%A%' and ename like '%E%';
+
 
 -- 14. 담당업무가 CLERK, 또는 SALESMAN이면서 급여가 $1600, $950 또는 $1300이 아닌 사원의
 --   이름, 담당업무, 급여를 출력하시오.

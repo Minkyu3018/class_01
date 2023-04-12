@@ -6,7 +6,7 @@ create table dept(
 );
 
 
-Create the EMP table which has a foreign key reference to the DEPT table. The foreign key will require that the DEPTNO in the EMP table exist in the DEPTNO column in the DEPT table.
+--Create the EMP table which has a foreign key reference to the DEPT table. The foreign key will require that the DEPTNO in the EMP table exist in the DEPTNO column in the DEPT table.
 create table emp(   
   empno    number(4,0),   
   ename    varchar2(10),   
@@ -62,6 +62,5 @@ group by DNAME
 order by 2 desc;
 
 commit;
-
 
 

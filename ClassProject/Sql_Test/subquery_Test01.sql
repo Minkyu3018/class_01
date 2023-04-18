@@ -32,16 +32,13 @@ where sal = (select min(sal) from emp)
 
 -- 46. 평균급여가 가장 적은 직급의 직급 이름과 직급의 평균을 구하시오.   **********
 -- 직급별 최저 평균 급여
-select min(avg(sal))
-from emp
-group by job
-;
+select min(avg(sal)) from emp group by job ;
 
 select job, avg(sal)
 from emp
 having avg(sal)= (select min(avg(sal))
-                from emp
-                group by job)
+                  from emp
+                  group by job)
 group by job
 ;
 
@@ -156,3 +153,67 @@ select ename
 from emp
 where deptno in (select distinct deptno from emp where job='MANAGER')
 ;
+
+--------------------------------------------------------------------------
+select job from emp where empno = 7788;
+
+select ename, job
+from emp 
+where job in (select job from emp where empno = 7788)
+;
+
+select sal from emp where empno = 7499;
+
+select ename, job
+from emp
+where sal > (select sal from emp where empno = 7499)
+;
+
+select min(sal) from emp;
+
+select ename, job, sal
+from emp
+having sal = (select min(sal) from emp)
+group by ename, job, sal
+;
+
+
+select min(avg(sal)) from emp group by job;
+
+select job, avg(sal)
+from emp
+having avg(sal) = (select min(avg(sal)) from emp group by job)
+group by job
+;
+
+
+select min(avg(sal)) from emp group by job ;
+
+select job, avg(sal)
+from emp
+having avg(sal)= (select min(avg(sal))
+                  from emp
+                  group by job)
+group by job
+;
+
+
+select distinct deptno, min(sal) from emp group by deptno;
+
+select ename, sal, deptno
+from emp
+where sal in (select distinct min(sal) from emp group by deptno)
+order by deptno
+;
+
+
+select distinct sal from emp where job = 'ANALYST' ;
+
+select empno, ename, job, sal
+from emp
+where sal < (select distinct sal from emp where job = 'ANALYST')
+and job != 'ANALYST'
+order by empno
+;
+
+select ename from emp where mgr is not null ;

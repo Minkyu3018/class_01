@@ -87,3 +87,15 @@ where rownum >=3 and rownum <=5;
 ------------------------------------------------------------------------
 
 select to_char(hiredate, 'YYYY') from emp;
+
+
+create or replace view vemp_01
+as
+select ename, hiredate from emp order by hiredate
+;
+
+drop view vemp_01;
+
+select * from vemp_01;
+
+commit;

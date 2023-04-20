@@ -37,8 +37,9 @@ public class InsertTest {
 			pstmt.setString(2, "개발팀");
 			pstmt.setString(3, "SEOUL");
 			
-			int result = pstmt.executeUpdate();
+			int result = pstmt.executeUpdate(); // 처리된 개수 값 뽑아내기
 			
+			// 처리된 개수 반환값이 1이상이면 메세지 출력
 			if(result>0) {
 				System.out.println("데이터가 입력되었습니다");
 			}

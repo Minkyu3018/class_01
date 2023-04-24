@@ -4,7 +4,7 @@ import domain.Dept;
 import main.DeptManagerMain;
 import service.DeptSearchService;
 
-public class DeptSearchController {
+public class DeptSearchController implements Controller {
 
 	// Service
 	DeptSearchService searchService;

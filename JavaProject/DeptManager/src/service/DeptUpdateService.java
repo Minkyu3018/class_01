@@ -10,7 +10,7 @@ import util.ConnectionProvider;
 public class DeptUpdateService {
 	
 	DeptDao dao;
-	
+
 	private DeptUpdateService() {
 		this.dao = DeptDao.getInstance();
 	}
@@ -27,28 +27,34 @@ public class DeptUpdateService {
 		int result = 0;
 		
 		try {
-			conn = ConnectionProvider.getConnection();
+			conn = ConnectionProvider.getConnection();			
 			result = dao.updateDeptByDeptno(conn, newDept);
-		
+			
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
-		
 		} finally {
 			if(conn != null) {
 				try {
 					conn.close();
 				} catch (SQLException e) {
+					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 		}
 		
-		
 		return result;
-		
-	} 
+	}
 	
 	
 	
 	
+	
+	
+	
+	
+	
+	
+
 }

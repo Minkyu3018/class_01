@@ -1,10 +1,5 @@
 package controller;
 
-public class Controller {
-	public interface process() {
-		
-		
-	}
-	
-
+public interface Controller {
+	void process();
 }

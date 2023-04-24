@@ -23,6 +23,7 @@ public class DeptListController implements Controller {
 		return controller;
 	}
 
+	@Override
 	public void process() {
 		
 		// 사용자 요청 분석
@@ -37,11 +38,12 @@ public class DeptListController implements Controller {
 	}
 	
 	void printData(List<Dept> list) {
-		System.out.println("부서리스트 ===========");		
-		System.out.println("부서번호\t부서이름\t위치");
-		System.out.println("===============================");
+		System.out.println("부서리스트 ======================================");		
+		System.out.printf("%10s \t%10s \t%10s\n","부서번호", "부서이름", "위치");
+		System.out.println("==============================================");
 		for(Dept d : list) {
-			System.out.println(d.getDeptno() + "\t" + d.getDname() + "\t" + d.getLoc());
+			//System.out.println(d.getDeptno() + "\t" + d.getDname() + "\t" + d.getLoc());
+			System.out.printf("%10d \t%12s \t%12s\n",d.getDeptno(),d.getDname(),d.getLoc());
 		}
 	}
 	

@@ -11,25 +11,21 @@ import java.util.List;
 import domain.Dept;
 
 public class DeptDao {
-
-	//Connection conn;
-	
 	
 	// DAO : sql 실행하는 메소드만 가지는 클래스
 	// => 여러개의 인스턴스가 생성될 필요가 없다!
-	// => 싱글톤 처리를 통해서 하나의 인스턴스만 사용!
+	// => 싱글톤처리를 통해서 하나의 인스턴스만 사용!
 	
 	// 1. 인스턴스 생성 금지 : private 생성자
-	private DeptDao(){		
+	private DeptDao(){	
 	}
 	// 2. 클래스 내부에서 인스턴스 생성 : private static
 	private static DeptDao dao = new DeptDao();
-	// 3. 다른 클래스에서 인스턴스를 얻을 수 있는 메소드 : public static
+	// 3. 다른클래스에서 인스턴스를 얻을 수 있는 메소드 : public static
 	public static DeptDao getInstance() {
 		return dao;
 	}
-	
-	
+
 	// 1. dept list : List<Dept>
 	public List<Dept> selectByAll(Connection conn) {
 
@@ -51,7 +47,7 @@ public class DeptDao {
 		List<Dept> result = new ArrayList<Dept>();
 
 		// sql
-		String sql = "select * from dept order by deptno";
+		String sql = "select * from dept";
 
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -117,9 +113,8 @@ public class DeptDao {
 			
 			
 		} catch (SQLException e) {
-
+			// TODO Auto-generated catch block
 			e.printStackTrace();
-		
 		} finally {
 			
 			try {
@@ -147,7 +142,7 @@ public class DeptDao {
 		int result = 0;
 		
 		// Insert Sql
-		String sql = "insert into dept values (? , ? , ?)";
+		String sql = "insert into dept values (?, ?, ?)";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -155,30 +150,26 @@ public class DeptDao {
 			pstmt.setString(2, dept.getDname());
 			pstmt.setString(3, dept.getLoc());
 			
+			result = pstmt.executeUpdate();	
 			
-			result = pstmt.executeUpdate();
-		
 		} catch (SQLException e) {
-
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if(pstmt != null) {
 				try {
 					pstmt.close();
 				} catch (SQLException e) {
+					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 		}
-				
 		
 		return result;
 	}
-	
-	
 
 	// 4. 부서 정보 수정 : deptno, dname, loc
-	
 	public int updateDeptByDeptno(Connection conn, Dept dept) {
 		
 		PreparedStatement pstmt = null;
@@ -187,7 +178,6 @@ public class DeptDao {
 		// Update Sql
 		String sql = "update dept set dname=?, loc=? where deptno=?";
 		
-		
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dept.getDname());
@@ -195,28 +185,33 @@ public class DeptDao {
 			pstmt.setInt(3, dept.getDeptno());
 			
 			result = pstmt.executeUpdate();
-		
+			
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
-			if(pstmt != null)
+			if(pstmt != null) {
 				try {
 					pstmt.close();
 				} catch (SQLException e) {
+					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+			}
 		}
 		
 		return result;
 		
 	}
+	
 
-	// 5. 부서 정보 삭제 : deptno => 삭제할 부서번호
+	// 5. 부서 정보 삭제 : deptno => 삭제할 부서 번호
 	public int deleteDeptByDeptno(Connection conn, int deptno) {
 		
 		PreparedStatement pstmt = null;
 		int result = 0;
 		
+		// delete Sql
 		String sql = "delete from dept where deptno = ?";
 		
 		try {
@@ -224,21 +219,20 @@ public class DeptDao {
 			pstmt.setInt(1, deptno);
 			
 			result = pstmt.executeUpdate();
-						
-		
+			
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
-			if( pstmt != null ) {
+			if(pstmt != null) {
 				try {
 					pstmt.close();
-				
 				} catch (SQLException e) {
+					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 		}
-		
 		
 		return result;
 	}
@@ -247,12 +241,6 @@ public class DeptDao {
 	
 	
 	
-	
-	
-	
-	
-	
-
 	public static void main(String[] args) throws SQLException {
 
 		DeptDao dao = new DeptDao();
@@ -270,13 +258,17 @@ public class DeptDao {
 		System.out.println("결과 : " + dept);
 		
 		//int insertResult = dao.insertDept(conn, new Dept(50, "Test", "Seoul"));
-		//System.out.println("저장결과 : " + insertResult);
-
+		//System.out.println("저장 결과 : " + insertResult);
 		
-		Dept d = new Dept(50, "TTT", "QQQ"); // 수정하고자하는 부서정보
+		Dept d = new Dept (50, "TTT", "QQQ"); // 수정하고자하는 부서 정보
 		int updateResult = dao.updateDeptByDeptno(conn, d);
 		System.out.println(updateResult);
-		
+
 	}
 
 }
+
+
+
+
+

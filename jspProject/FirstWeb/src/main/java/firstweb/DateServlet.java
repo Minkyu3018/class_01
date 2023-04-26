@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet({ "/now", "/test/now" })
+/*@WebServlet({ "/now", "/test/now" })*/
 public class DateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

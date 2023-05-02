@@ -19,7 +19,7 @@ public class TodoListController extends HttpServlet {
 	TodoListService listService;
 	
 	public TodoListController() {
-		this.listService = new TodoListService();
+		this.listService = TodoListService.getInstence();
 	}
 
 

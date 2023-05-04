@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1 style="background-color: yellow;">Todo 상세보기</h1>
+<h1 style="background-color: yellow;">Todo 상세보기( ${loginInfo.uid} [${loginInfo.uname}] )</h1>
 
 	번호 : <input type="text" name="no" value="${todo.tno}" readonly> <br>
 	할일 : <input type="text" name="todo" value="${todo.todo}" readonly> <br>

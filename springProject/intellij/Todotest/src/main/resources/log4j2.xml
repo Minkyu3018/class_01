@@ -11,7 +11,7 @@
         <logger name="org.springframework" level="INFO" additivity="false">
             <appender-ref ref="console"/>
         </logger>
-        <logger name="com.hi.todo" level="INFO" additivity="false">
+        <logger name="com.min.todo" level="INFO" additivity="false">
             <appender-ref ref="console"/>
         </logger>
         <root level="INFO" additivity="false">

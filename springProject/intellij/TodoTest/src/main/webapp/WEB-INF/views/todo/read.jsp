@@ -1,25 +1,24 @@
 <%--
   Created by IntelliJ IDEA.
-  User: hi
+  User: 송민규
   Date: 2023-05-11
-  Time: 오후 3:07
+  Time: 오후 11:14
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Todo LIST</title>
+    <title>Todo read</title>
 </head>
 <body>
 
-    <h1>Todo LIST...(test)</h1>
+    <h1>Todo 보기</h1>
     <hr>
 
-    <h3>${todolist}</h3>
+    <h3>${todo}</h3>
 
-    <a href="/todo/read">read 페이지</a>
-    <a href="/todo/regist">등록 페이지</a>
-
+        <a href="/todo/modify">수정</a> <br>
+        <a href="/todo/delete">삭제</a>
 
 </body>
 </html>

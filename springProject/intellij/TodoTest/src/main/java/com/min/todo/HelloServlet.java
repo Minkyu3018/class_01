@@ -1,4 +1,4 @@
-package com.min.todo.todo;
+package com.min.todo;
 
 import java.io.*;
 import javax.servlet.http.*;

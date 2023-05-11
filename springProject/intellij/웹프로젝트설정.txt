@@ -30,4 +30,15 @@ beans -> mvc : annotation-driven -> mvc : resources -> property -> context:compo
 
 - Controller : @Controller, @RequestMapping
 - View( JSP ) :
-- Service, DAO
+- Model : Service, DAO
+
+-------------------------------------------------------------------------------------------------------------
+
+사용자 입력 데이터 받기
+- encoding filter 등록 : web.xml
+ org.springframework.web.filter.CharacterEncodingFilter
+
+
+
+
+

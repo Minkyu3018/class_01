@@ -18,14 +18,14 @@
         <h3>${todo}</h3>
 
     <form method="post">
-        Tno <input type="text" name="tno" readonly> <br>
-        Todo <input type="text" name="todo"> <br>
-        Duedate <input type="date" name="duedate"> <br>
-        <input type="checkbox" name="complete">check <br>
+        Tno <input type="text" name="tno" value="1" readonly> <br>
+        Todo <input type="text" name="todo" value="놀기"> <br>
+        Duedate <input type="date" name="duedate" value="2023-12-25"> <br>
+        <input type="checkbox" name="finished" checked> check! <br>
         <input type="reset"> <input type="submit" value="등록">
-
-
     </form>
+
+    <h3>${strData}</h3>
 
 </body>
 </html>

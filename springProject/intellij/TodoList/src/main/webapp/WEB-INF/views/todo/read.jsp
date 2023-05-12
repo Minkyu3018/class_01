@@ -18,7 +18,7 @@
     <h3>${todo}</h3>
 
         <a href="/todo/modify">수정</a> <br>
-        <a href="/todo/delete">삭제</a>
+        <a href="/todo/delete?tno=11">삭제</a>
 
 </body>
 </html>

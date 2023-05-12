@@ -29,7 +29,7 @@ public class TodoModifyController {
     @RequestMapping(method = RequestMethod.POST)
     public String modify(
             @ModelAttribute("modifyData") ModifyTodoRequest modifyTodoRequest
-            
+
     ){
 
         log.info("post  /todo/modify");

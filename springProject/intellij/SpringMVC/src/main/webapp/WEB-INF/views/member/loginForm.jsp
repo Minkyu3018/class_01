@@ -17,7 +17,8 @@
     id <input type="text" name="uid"> <br>
     pw <input type="password" name="pw"> <br>
     <hr>
-    <input type="submit" value="login" style="background-color: gold"  >
+    <input type="submit" value="로그인"
+           style="background-color: gold; height: 30px; width: 100px; font-size: 15px"  >
 
 </form>
 

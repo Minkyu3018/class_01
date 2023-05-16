@@ -32,7 +32,7 @@
     </update>
 
     <delete id="deleteDept">
-        delete form dept where deptno=#{no}
+        delete from dept where deptno=#{no}
     </delete>
 
 </mapper>

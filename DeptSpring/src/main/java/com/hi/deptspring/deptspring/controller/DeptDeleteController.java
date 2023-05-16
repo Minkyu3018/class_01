@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class DeptDeleteController {
 
     @Autowired
-    private DeptDeleteService deptDeleteService;
+    private DeptDeleteService deleteService;
 
     @RequestMapping("/dept/delete")
     public String delete(
@@ -20,7 +20,7 @@ public class DeptDeleteController {
     ){
         log.info(" /dept/delete");
         
-        deptDeleteService.deleteDept(deptno);
+        deleteService.deleteDept(deptno);
         log.info(deptno + "번 부서 삭제");
 
         

@@ -14,16 +14,33 @@
         td, th {
             padding: 15px;
         }
+        button {
+            border: 0;
+            font-size: 15px;
+            margin: 5px;
+            background: lightgray;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            color: white;
+            background: orange;
+        }
+
+
     </style>
 </head>
 <body>
 
-    <h1>게시판</h1>
+    <h1>【 게시판 】</h1>
     <hr>
 
 
     <table border="1">
-        <tr>
+        <tr style="background-color: lightgray">
             <th>번호</th>
             <th>제목</th>
             <th>작성자</th>
@@ -41,7 +58,7 @@
 
 
     </table>
-    <a href="/board/write">글쓰기</a>
+    <button><a href="/board/write">글쓰기</a></button>
 
 </body>
 </html>

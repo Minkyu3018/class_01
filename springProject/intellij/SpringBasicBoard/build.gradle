@@ -3,7 +3,7 @@ plugins {
   id 'war'
 }
 
-group 'com.hi.deptspring'
+group 'com.hi'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -26,6 +26,7 @@ dependencies {
 
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
 
   // Spring
   // spring-core, spring-context, spring-test, spring-webmvc

@@ -13,12 +13,13 @@
 <body>
 
   <h1>게시글 쓰기</h1>
+  ${loginInfo}
   <hr>
   <form method="post" enctype="multipart/form-data">
     <table>
       <tr>
         <td>작성자</td>
-        <td><input type="text" name="writer" required></td>
+        <td><input type="text" name="writer" required value="${loginInfo.idx}"></td>
       </tr>
 
       <tr>

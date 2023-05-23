@@ -17,4 +17,7 @@ public class BoardDTO {
     private String file;
     private String regdate;
     private String updatedate;
+
+    // 작성자의 idx
+    private int memidx;
 }

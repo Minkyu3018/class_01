@@ -83,8 +83,12 @@
     </table>
 
     <button><a href="/board/list">LIST</a></button>
-    <button><a href="/board/modify?bno=${article.bno}">수정</a></button>
-    <button><a href="/board/delete?bno=${article.bno}">삭제</a></button>
+
+    <c:if test="${loginInfo.idx eq article.memidx}">
+        <button><a href="/board/modify?bno=${article.bno}">수정</a></button>
+        <button><a href="/board/delete?bno=${article.bno}">삭제</a></button>
+    </c:if>
+
 
 
 

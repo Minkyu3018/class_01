@@ -43,12 +43,14 @@
         </td>
       </tr>
 
+      <%-- 작성자 부분 불필요 삭제 (23.5.23)
       <tr>
         <td>작성자</td>
         <td>
           <input type="text" name="writer" value="${board.writer}">
         </td>
       </tr>
+      --%>
 
       <%-- 이전에 올라와 있는 파일 출력 --%>
       <tr>

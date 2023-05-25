@@ -5,18 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <script>
+        console.log(global)
+    </script> -->
  
 </head>
 <body>
-    
-    <h2 id="hello">안녕하세요</h2>
-    <h2 id="hi">올때메로나</h2>
+       
 
     <script>
+        var global = 'global'
+        console.log(global)
+
+        var t1
+        t1 = 10
+        console.log(t1)
+
+        let t2
+        t2 = 10
+        t2 = 200
+        console.log(t2)
+
+        const t3 = 30
         
-        document.getElementById('hello').innerHTML = '안녕'
-        document.getElementById('hello').style.fontSize = '30px'
-        document.getElementById('hi').innerHTML = '올때바밤바'
+        console.log(t3)
+
+
+        let t4 = (ttt) => ttt*ttt
+        console.log(t4(3))
+
 
     </script>
 

@@ -57,17 +57,19 @@
                     data: JSON.stringify(payload),
                     dataType: 'json',
                     success: function (data){
-                        //console.log('data')
+                        //console.log(data)
+
+                        const reply = data
 
                         // 화면에 동적으로 HTML 생성 추가
                         let html = ''
-                            html +='<td>' + data.memIdx +'</td>'
-                            html +='<td>'+data.reply+'</td>'
-                            html +='<td>'+data.replyDate+'</td>'
-                            html +='<td><a href="javascript:del(' +data.rno + ')">삭제</a></td>'
+                            html +='<td>' + reply.memIdx +'</td>'
+                            html +='<td>'+reply.reply+'</td>'
+                            html +='<td>'+reply.replyDate+'</td>'
+                            html +='<td><a href="javascript:delTr(' +reply.rno + ')">삭제</a></td>'
 
 
-                        const newTR = $('<tr></tr>').attr('tr-index', data.rno).html(html)
+                        const newTR = $('<tr></tr>').attr('tr-index', reply.rno).html(html)
 
                         $('#replyList').append(newTR)
 

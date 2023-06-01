@@ -13,6 +13,6 @@ public class ReplyInsertService {
 
     public int insertReply(ReplyDTO replyDTO){
 
-        return replyMapper.insertReply((replyDTO));
+        return replyMapper.insertReply(replyDTO);
     }
 }

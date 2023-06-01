@@ -8,11 +8,13 @@
 </head>
 <body>
 
-    <h1>List Page</h1>
+    <h1>Modify Page</h1>
 
-   
+    <form action="/todo/modify/33" method="post">
 
-   
+        <button>MODIFY</button>
+
+    </form>
     
 </body>
 </html>

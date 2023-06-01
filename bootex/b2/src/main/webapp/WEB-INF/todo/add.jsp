@@ -10,6 +10,11 @@
 
     <h1>Add Page</h1>
 
+    <form action="/todo/add" method="post">
+
+        <button>ADD</button>
+
+    </form>
     
     
 </body>

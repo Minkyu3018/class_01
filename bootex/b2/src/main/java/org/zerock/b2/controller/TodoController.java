@@ -27,6 +27,7 @@ public class TodoController {
 
     @PostMapping("add")
     public String addPost(){
+        log.info("Add Post....");
         return "redirect:/todo/list";
     }
 
@@ -40,18 +41,20 @@ public class TodoController {
 
     @GetMapping("modify/{tno}")
     public String modify(@PathVariable("tno") Long tno){
-        log.info("modify.......");
+        log.info("Modify.......");
         return "/todo/modify";     
 
     }
 
     @PostMapping("remove")
-    public String remove(){
+    public String removePost(){
+        log.info("RemovePost.......");
         return "redirect:/todo/list";
     }
 
     @PostMapping("modify/{tno}")
     public String modifyPost(@PathVariable("tno") Long tno){
+        log.info("ModifyPost.......");
         return "redirect:/todo/read/" + tno;
     }
 
